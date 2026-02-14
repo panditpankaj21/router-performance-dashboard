@@ -456,8 +456,20 @@ const RouterDashboard = () => {
   const [timeRange, setTimeRange] = useState('MAX');
   const [showHistory, setShowHistory] = useState(false);
   const [selectedHistoryRun, setSelectedHistoryRun] = useState(null);
+  // const [routerData, setRouterData] = useState([]);
 
-  // Get all test runs across all features for history
+  // useEffect(() => {
+  //   // Fetch from FastAPI instead of sample data
+  //   fetch('http://localhost:8000/api/routers')
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setRouterData(data);
+  //       console.log('Loaded routers:', data);
+  //     })
+  //     .catch(err => console.error('Error loading routers:', err));
+  // }, []);
+
+  
   const getAllTestRuns = () => {
     if (!selectedRouter) return [];
     
